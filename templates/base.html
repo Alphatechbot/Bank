@@ -1,0 +1,22 @@
+{% load static %}
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+     <link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+    <title>Password Holder</title>
+</head>
+<body>
+     <div class="sidenav">
+         <a href="{% url 'base:home' %}">Home</a>
+         <a href="{% url 'base:welcome' %}"> Escrow</a>
+         <a href=""> Logout</a>
+     </div>
+
+    <div id ="content" name="content" class ='main'>
+    <div>
+        {% block content %}
+        {% endblock %}
+    </div>
+    </div>
+</body>
+</html>

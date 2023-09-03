@@ -1,0 +1,25 @@
+{% include 'base.html' %}
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'styles/style.css' %}" />
+<div>
+     {% if messages %}
+    <ul class = "messages">
+        {% for message in messages %}
+        <li>{{ message }}</li>
+        {% endfor %}
+    </ul>
+    {% endif %}
+    <p><a href="{% url 'base:home' %}">BACK</a></p>
+    <div class="main">
+        <h1>Welcome to Crypto<br> Exchange</h1>
+        <p>Please check that you are visiting the correct URL</p>
+        <h3>https//cryptoexchange.com</h3>
+
+        <p><a href="{% url 'base:login' %}" >Sign up with email </a></p>
+        <p> <a href="">Continue with Google</a></p>
+
+    </div>
+
+</div>
+
